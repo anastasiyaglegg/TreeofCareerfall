@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Tree of Career</title>
+<meta name="description" content="An interactive portfolio in the shape of an ancient oak — roots of origin, branches of character, fruit of skill." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ambient swirling autumn leaves -->
+  <div class="autumn-leaves" aria-hidden="true">
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+    <span class="leaf-particle"></span>
+  </div>
+
+  <header class="masthead">
+    <div class="personal-header">
+      <h1 class="name">Anastasiya Glegg</h1>
+      <p class="tagline">Creative Problem Solver | Writer | Artist | Songwriter</p>
+      <p class="bio">Building thoughtful experiences through creativity, curiosity, and analytical thinking.</p>
+      <div class="contact">
+        <a href="mailto:anastasiyaglegg@gmail.com">anastasiyaglegg@gmail.com</a>
+        <span> | </span>
+        <a href="tel:9175103547">(917) 510-3547</a>
+      </div>
+    </div>
+    <p class="eyebrow">A Portfolio, Rooted &amp; Branching</p>
+    <p class="tree-title">The Tree of Career</p>
+    <p class="intro">
+      Every tree carries a life underground before it ever shows a leaf.
+      Below are the roots that fed it, the branches it grew, and the fruit it now offers.
+      <span class="hint">Touch anything that glows.</span>
+    </p>
+  </header>
+
+  <main class="stage" id="stage">
+    <svg
+      class="tree"
+      viewBox="0 0 700 900"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="An illustrated ancient oak tree. Its gnarled roots represent formative moments, its branches represent personal qualities, and its fruit represent professional skills."
+    >
+      <defs>
+        <radialGradient id="fruitShine" cx="35%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="#f2d896" />
+          <stop offset="55%" stop-color="#c9a24b" />
+          <stop offset="100%" stop-color="#8f6c26" />
+        </radialGradient>
+
+        <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="6" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- ============ GROUND ============ -->
+      <ellipse cx="350" cy="655" rx="330" ry="40" fill="var(--ground)" opacity="0.6" />
+      <line x1="30" y1="648" x2="670" y2="648" class="ground-line" />
+
+      <!-- ============ ROOTS — thick, gnarled, gripping the earth ============ -->
+      <g class="roots">
+        <path id="root-path-1" class="root-path" d="M320,635 C260,680 190,710 150,758" />
+        <path class="root-path" d="M335,640 C300,700 265,750 230,798" />
+        <path id="root-path-2" class="root-path" d="M350,644 C350,700 350,760 350,818" />
+        <path class="root-path" d="M365,640 C400,700 435,750 470,798" />
+        <path id="root-path-3" class="root-path" d="M380,635 C440,680 510,710 550,758" />
+
+        <g class="node root-node" data-type="root" data-key="root1" tabindex="0" role="button"
+           aria-label="Root I: a formative beginning" transform="translate(150,758)">
+          <circle class="node-halo" r="26" />
+          <circle class="node-core" r="10" />
+          <text class="node-tag" y="42">ROOT I</text>
+        </g>
+
+        <g class="node root-node" data-type="root" data-key="root2" tabindex="0" role="button"
+           aria-label="Root II: a formative moment" transform="translate(350,818)">
+          <circle class="node-halo" r="26" />
+          <circle class="node-core" r="10" />
+          <text class="node-tag" y="42">ROOT II</text>
+        </g>
+
+        <g class="node root-node" data-type="root" data-key="root3" tabindex="0" role="button"
+           aria-label="Root III: a formative meeting" transform="translate(550,758)">
+          <circle class="node-halo" r="26" />
+          <circle class="node-core" r="10" />
+          <text class="node-tag" y="42">ROOT III</text>
+        </g>
+      </g>
+
+      <!-- ============ TRUNK — thick, weathered, ancient ============ -->
+      <path class="trunk" d="M268,640
+        C250,580 236,530 244,478
+        C248,452 232,432 240,404
+        C246,382 264,372 258,350
+        C254,332 268,318 278,302
+        L330,300
+        C328,310 336,318 334,328
+        C332,340 344,346 348,358
+        L352,358
+        C356,346 368,340 366,328
+        C364,318 372,310 370,300
+        L422,302
+        C432,318 446,332 442,350
+        C436,372 454,382 460,404
+        C468,432 452,452 456,478
+        C464,530 450,580 432,640
+        Z" />
+
+      <path class="trunk-grain" d="M282,610 C270,540 262,480 270,420 C274,390 264,360 276,320" />
+      <path class="trunk-grain" d="M320,600 C314,530 318,470 316,400 C315,375 320,345 318,310" />
+      <path class="trunk-grain" d="M382,600 C390,530 386,470 388,400 C389,375 384,345 386,310" />
+      <path class="trunk-grain" d="M420,610 C432,540 440,480 432,420 C428,390 438,360 426,320" />
+
+      <ellipse class="trunk-knot" cx="288" cy="470" rx="16" ry="22" />
+      <ellipse class="trunk-knot" cx="416" cy="540" rx="13" ry="18" />
+      <circle class="trunk-knot" cx="350" cy="600" r="10" />
+
+      <!-- ============ NAME (carved into the trunk) ============ -->
+      <text class="trunk-name" x="350" y="520" transform="rotate(-90 350 520)">Anastasiya Glegg</text>
+
+      <!-- ============ BRANCHES ============ -->
+      <g class="branches">
+        <path id="branch-path-1" class="branch-path" d="M310,304 C260,270 220,230 195,175" />
+        <path id="branch-path-2" class="branch-path" d="M350,300 C350,250 350,195 350,140" />
+        <path id="branch-path-3" class="branch-path" d="M390,304 C440,270 480,230 505,175" />
+      </g>
+
+      <!-- ============ CANOPY — full, rounded, painterly oak mass ============ -->
+      <g class="canopy">
+        <ellipse class="canopy-blob canopy-shadow" cx="372" cy="235" rx="195" ry="145" />
+        <ellipse class="canopy-blob canopy-a" cx="235" cy="215" rx="140" ry="112" />
+        <ellipse class="canopy-blob canopy-a" cx="465" cy="205" rx="130" ry="106" />
+        <ellipse class="canopy-blob canopy-b" cx="310" cy="165" rx="122" ry="98" />
+        <ellipse class="canopy-blob canopy-b" cx="440" cy="235" rx="102" ry="86" />
+        <ellipse class="canopy-blob canopy-b" cx="195" cy="255" rx="90" ry="76" />
+        <ellipse class="canopy-blob canopy-c" cx="335" cy="120" rx="102" ry="82" />
+        <ellipse class="canopy-blob canopy-c" cx="460" cy="150" rx="82" ry="66" />
+        <ellipse class="canopy-blob canopy-c" cx="222" cy="140" rx="76" ry="60" />
+        <ellipse class="canopy-blob canopy-d" cx="285" cy="95" rx="56" ry="42" />
+        <ellipse class="canopy-blob canopy-d" cx="410" cy="108" rx="46" ry="35" />
+      </g>
+
+      <!-- interactive branch nodes, sitting atop the canopy -->
+      <g class="branch-nodes">
+        <g class="node branch-node" data-type="branch" data-key="branch1" tabindex="0" role="button"
+           aria-label="Branch I: a quality" transform="translate(200,150)">
+          <circle class="node-halo" r="26" />
+          <circle class="node-core" r="10" />
+          <text class="node-tag" y="-24">BRANCH I</text>
+        </g>
+
+        <g class="node branch-node" data-type="branch" data-key="branch2" tabindex="0" role="button"
+           aria-label="Branch II: a quality" transform="translate(350,90)">
+          <circle class="node-halo" r="26" />
+          <circle class="node-core" r="10" />
+          <text class="node-tag" y="-24">BRANCH II</text>
+        </g>
+
+        <g class="node branch-node" data-type="branch" data-key="branch3" tabindex="0" role="button"
+           aria-label="Branch III: a quality" transform="translate(500,150)">
+          <circle class="node-halo" r="26" />
+          <circle class="node-core" r="10" />
+          <text class="node-tag" y="-24">BRANCH III</text>
+        </g>
+      </g>
+
+      <!-- ============ FRUIT ============ -->
+      <g class="fruits">
+        <g class="fruit-unit" id="fruit-unit-1">
+          <path class="stem" d="M225,185 C227,215 229,240 231,262" />
+          <g class="fruit-anchor" transform="translate(232,264)">
+            <g class="node fruit-node" data-type="fruit" data-key="fruit1" tabindex="0" role="button"
+               aria-label="Fruit I: a skill, ready to fall">
+              <circle class="fruit-glow" r="24" />
+              <circle class="fruit-body" r="16" />
+              <text class="node-tag fruit-tag" y="38">FRUIT I</text>
+            </g>
+          </g>
+        </g>
+
+        <g class="fruit-unit" id="fruit-unit-2">
+          <path class="stem" d="M350,120 C350,170 350,220 350,246" />
+          <g class="fruit-anchor" transform="translate(350,248)">
+            <g class="node fruit-node" data-type="fruit" data-key="fruit2" tabindex="0" role="button"
+               aria-label="Fruit II: a skill, ready to fall">
+              <circle class="fruit-glow" r="24" />
+              <circle class="fruit-body" r="16" />
+              <text class="node-tag fruit-tag" y="38">FRUIT II</text>
+            </g>
+          </g>
+        </g>
+
+        <g class="fruit-unit" id="fruit-unit-3">
+          <path class="stem" d="M475,185 C473,215 471,240 469,262" />
+          <g class="fruit-anchor" transform="translate(468,264)">
+            <g class="node fruit-node" data-type="fruit" data-key="fruit3" tabindex="0" role="button"
+               aria-label="Fruit III: a skill, ready to fall">
+              <circle class="fruit-glow" r="24" />
+              <circle class="fruit-body" r="16" />
+              <text class="node-tag fruit-tag" y="38">FRUIT III</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </main>
+
+  <!-- ============ SPECIMEN PANEL ============ -->
+  <aside class="panel" id="panel" aria-live="polite">
+    <button class="panel-close" id="panel-close" aria-label="Close">×</button>
+    <p class="panel-kind" id="panel-kind">Root</p>
+    <h2 class="panel-title" id="panel-title">—</h2>
+    <p class="panel-body" id="panel-body">—</p>
+    <button class="panel-reset" id="panel-reset" type="button" hidden>Set the fruit back on the branch</button>
+  </aside>
+
+  <footer class="colophon">
+    <p>Every root fed this trunk. Every branch bore this fruit. Click around — nothing here breaks permanently.</p>
+  </footer>
+
+  <script src="dist/main.js" defer></script>
+</body>
+</html>
+<!-- This is a comment -->
